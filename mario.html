@@ -2,31 +2,37 @@
 <html>
 
 <head>
-  <title>Mario pyramid</title>
+  <title>Magic pyramid</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>Pyramid slide</h1>
-  <h3>Behold this wonderful pyramid:</h3>
-  <div id="pyramid">
-    <form>
-      <label for="">Brick color
-        <select name="brickColor" id="brick-color">
-          <option value="red" default>Red</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-          <option value="orange">Orange</option>
-        </select>
-      </label>
-      <label>How high?
-        <input  type="range" name="pyramidHigh" id="pyramid-high"
-                min="2" max="16" value="4">
-        <span id="pyramid-high-value"></span>
-      </label>
-    </form>
-  </div>
-  <script src="mario.js"></script>
-</body>
+  <div class="wrapper">
 
+    <header class="header">
+      <h1>Magic pyramid</h1>
+    </header>
+    <aside>
+      <form>
+        <label for="">Brick color
+          <select name="brickColor" id="brick-color">
+            <option value="red" default>Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="orange">Orange</option>
+          </select>
+        </label>
+        <label>How high?
+          <input  type="range" name="pyramidHigh" id="pyramid-high"
+          min="2" max="16" value="4">
+          <span id="pyramid-high-value"></span>
+        </label>
+      </form>
+    </aside>
+    <div id="pyramid">
+    </div>
+  </div>
+    <script src="mario.js"></script>
+  </body>
+  
 </html>
