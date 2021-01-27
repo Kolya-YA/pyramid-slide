@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Mario pyramid</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Mario pyramid</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Mario 2</h1>
-    <h3>Behold this wonderful pyramid:</h3>
-    <div id="pyramid">
-        
-      <div id="construction">
-        <p>Uh oh! the pyramid is still under construction.</p>
-        <p>Check back again soon... our developers are hard at wrk as we speak!</p>
-      </div>
-    </div>
-    <script src="mario.js"></script>
+  <h1>Pyramid slide</h1>
+  <h3>Behold this wonderful pyramid:</h3>
+  <div id="pyramid">
+    <form>
+      <label for="">Brick color
+        <select name="brickColor" id="brick-color">
+          <option value="red" default>Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="orange">Orange</option>
+        </select>
+      </label>
+      <label>How high?
+        <input  type="range" name="pyramidHigh" id="pyramid-high"
+                min="2" max="16" value="4">
+        <span id="pyramid-high-value"></span>
+      </label>
+    </form>
+  </div>
+  <script src="mario.js"></script>
 </body>
+
 </html>

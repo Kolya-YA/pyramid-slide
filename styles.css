@@ -24,6 +24,22 @@ h1 {
   margin-right: 3px;
 }
 
-.brick {
+.brick .red{
   background-color: #B73239;
+}
+
+.brick.green{
+  background-color: green;
+}
+
+.brick.red{
+  background-color: #B73239;
+}
+
+.brick.blue{
+  background-color: lightskyblue;
+}
+
+.brick.orange{
+  background-color: orange;
 }

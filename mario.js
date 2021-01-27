@@ -1,9 +1,4 @@
-const printPyramid = height => {
-    let draw = document.createElement('div')
-    draw.className = 'draw'
-    const brick = document.createElement('div')
-    brick.className = 'brick'
-
+const printPyramid = (height, color) => {
     const divElem = divClass => {
         const elem = document.createElement('div')
         elem.className = divClass
@@ -17,21 +12,40 @@ const printPyramid = height => {
             sNum--
         }
         while (bNum > 0) {
-            level.push(elemCreate(brick))
+            level.push(elemCreate(`brick ${color}`))
             bNum--
         }
         return level
     }
+    
+    const draw = divElem('draw')
 
     for (let i = 1; i <= height; i++) {
         const levelContent = fillLevel(height - i, i + 1, 'space', 'brick', divElem)
-        const level = document.createElement('div')
-        level.className = 'drawLevel'
+        const level = divElem('drawLevel')
         level.append(...levelContent)
         draw.append(level)
     }
+    const oldDraw = document.querySelector('.draw')
+    oldDraw && oldDraw.remove()
     pyramid.append(draw)
-    construction.remove()
 }
 
-printPyramid(10)
+const colorSelector = document.querySelector('#brick-color')
+const highSelector = document.querySelector('#pyramid-high')
+const highValue = document.querySelector('#pyramid-high-value')
+
+highValue.innerText = highSelector.value
+
+highSelector.addEventListener('input', e => {
+    highValue.innerText = e.target.value
+})
+
+colorSelector.addEventListener('change', e => {
+    printPyramid(highSelector.value, colorSelector.value)
+})
+highSelector.addEventListener('change', e => {
+    printPyramid(highSelector.value, colorSelector.value)
+})
+
+printPyramid(highSelector.value, colorSelector.value)
