@@ -1,0 +1,29 @@
+h1 {
+  color: #B73239;
+}
+
+#pyramid {
+  font-family: "Courier New", monospace;
+  line-height: 0;
+}
+
+.drawLevel:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.space,
+.brick {
+  display: inline-block;
+  height: 20px;
+  width: 30px;
+  background-color: #ddd
+}
+
+.space:not(:last-child),
+.brick:not(:last-child) {
+  margin-right: 3px;
+}
+
+.brick {
+  background-color: #B73239;
+}
